@@ -49,7 +49,7 @@ Met VirtualBox (of VMware Player) kun je nu de RosIndigo32Bits.ova file openen e
 
 ### Ubuntu plus ROS native
 
-Voor een native installatie moet je 2 dingen doen±
+Voor een native installatie moet je 2 dingen doen:
 
 1. Ubuntu 14.04 installeren
 2. ROS Indigo installeren in Ubuntu
