@@ -1,4 +1,4 @@
-# Workshop "ROS voor Engineers" - deel 3
+# Workshop "ROS voor Engineers" - deel3
 
 auteur: Eric Dortmans (e.dortmans@fontys.nl)
 
