@@ -167,12 +167,12 @@ Voeg dan de volgende regels aan je modelfile toe om een Kinect support steun en 
         </visual>
     </link>
 
-  <xacro:include filename="$(find turtlebot_description)/urdf/sensors/kinect.urdf.xacro"/>
-  <sensor_kinect parent="base_link"/>
+    <xacro:include filename="$(find turtlebot_description)/urdf/sensors/kinect.urdf.xacro"/>
+    <sensor_kinect parent="base_link"/>
 
 Tenslotte start de visualisatie (opnieuw):
 
-   roslaunch urdf_tutorial xacrodisplay.launch model:=mobile_robot.urdf.xacro
+    roslaunch urdf_tutorial xacrodisplay.launch model:=mobile_robot.urdf.xacro
 
 Zet het vinkje bij TF uit om het model goed te zien. Als het goed is zit alles netjes aan elkaar. 
 
@@ -192,7 +192,7 @@ Als je de gesimuleerde robot laat bewegen zul je zien dat je robotmodel meebewee
 
 ## De mobiele robot krijgt een arm
 
-Om onze mobile robot af te maken zetten we er nog een arm op. Voege het volgende toe aan de model file:
+Om onze mobile robot af te maken zetten we er nog een arm op. Voeg het volgende toe aan de model file:
 
     <include filename="$(find turtlebot_arm_description)/urdf/arm.xacro" />
     <turtlebot_arm parent="base_link" color="white" gripper_color="green"
