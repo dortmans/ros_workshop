@@ -1,4 +1,4 @@
-# Workshop "ROS voor Engineers" - deel3
+# Workshop "ROS voor Engineers" - deel 3
 
 auteur: Eric Dortmans (e.dortmans@fontys.nl)
 
@@ -149,23 +149,23 @@ Het model klopt niet. De wielen zitten niet goed aan de base. Maak dat in orde.
 Heb je de wielen goed zitten? 
 Voeg dan de volgende regels aan je modelfile toe om een Kinect support steun en een Kinect aan het mobiele platform toe te voegen:
 
-  <joint name="kinect_support_joint" type="fixed">
-    <parent link="base_link" />
-    <child link="kinect_support" />
-    <origin xyz="-0.118 0 ${base_height/2}" rpy="0 0 0" />
-  </joint>
+    <joint name="kinect_support_joint" type="fixed">
+      <parent link="base_link" />
+      <child link="kinect_support" />
+      <origin xyz="-0.118 0 ${base_height/2}" rpy="0 0 0" />
+    </joint>
 
-  <link name="kinect_support">
-    <visual>
-      <origin xyz="0 0 ${kinect_support_height/2}" rpy="0 0 0" />
-      <geometry>
-        <box size="0.05 0.05 ${kinect_support_height}" />
-      </geometry>
-      <material name="grey_blue">
-        <color rgba="0.4 0.4 1.0 1"/>
-      </material>
-    </visual>
-  </link>
+    <link name="kinect_support">
+      <visual>
+        <origin xyz="0 0 ${kinect_support_height/2}" rpy="0 0 0" />
+        <geometry>
+          <box size="0.05 0.05 ${kinect_support_height}" />
+        </geometry>
+          <material name="grey_blue">
+            <color rgba="0.4 0.4 1.0 1"/>
+          </material>
+        </visual>
+    </link>
 
   <xacro:include filename="$(find turtlebot_description)/urdf/sensors/kinect.urdf.xacro"/>
   <sensor_kinect parent="base_link"/>
@@ -194,11 +194,11 @@ Als je de gesimuleerde robot laat bewegen zul je zien dat je robotmodel meebewee
 
 Om onze mobile robot af te maken zetten we er nog een arm op. Voege het volgende toe aan de model file:
 
-  <include filename="$(find turtlebot_arm_description)/urdf/arm.xacro" />
-  <turtlebot_arm parent="base_link" color="white" gripper_color="green"
-    joints_vlimit="${M_PI/2}" pan_llimit="-${M_PI/2}" pan_ulimit="${M_PI/2}">
-    <origin xyz="0.12 0 0.02"/>
-  </turtlebot_arm>
+    <include filename="$(find turtlebot_arm_description)/urdf/arm.xacro" />
+    <turtlebot_arm parent="base_link" color="white" gripper_color="green"
+      joints_vlimit="${M_PI/2}" pan_llimit="-${M_PI/2}" pan_ulimit="${M_PI/2}">
+      <origin xyz="0.12 0 0.02"/>
+    </turtlebot_arm>
 
 Kunnen we de arm ook bewegen?
 
